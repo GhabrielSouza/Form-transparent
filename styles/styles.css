@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+:root{
+    --cor-primaria: #fff;
+    --cor-secundaria: rgba(255,255,255,0.5);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +27,7 @@ section{
     width: 400px;
     height: 450px;
     background: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
+    border: 2px solid var(--cor-secundaria);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
@@ -32,7 +37,7 @@ section{
 
 h2{
     font-size: 2em;
-    color: #fff;
+    color: var(--cor-primaria);
     text-align: center;
 }
 
@@ -40,7 +45,7 @@ h2{
     position: relative;
     margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--cor-primaria);
 }
 
 .inputbox label{
@@ -48,7 +53,7 @@ h2{
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #fff;
+    color: var(--cor-primaria);
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
@@ -67,13 +72,13 @@ input:valid ~ label{
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
-    color: #fff;
+    color: var(--cor-primaria);
 }
 
 .inputbox ion-icon{
     position: absolute;
     right: 8px;
-    color: #fff;
+    color: var(--cor-primaria);
     font-size: 1.2em;
     top: 20px;
 }
@@ -81,7 +86,7 @@ input:valid ~ label{
 .forget{
     margin: -15px 0 15px;
     font-size: .9em;
-    color: #fff;
+    color: var(--cor-primaria);
     display: flex;
     justify-content: center;
 }
@@ -92,7 +97,7 @@ input:valid ~ label{
 }
 
 .forget label a{
-    color: #fff;
+    color: var(--cor-primaria);
     text-decoration: none;
 }
 
@@ -104,7 +109,7 @@ button{
     width: 100%;
     height: 40px;
     border-radius: 40px;
-    background: #fff;
+    background: var(--cor-primaria);
     border: none;
     outline: none;
     cursor: pointer;
@@ -114,14 +119,14 @@ button{
 
 .register{
     font-size: .9em;
-    color: #fff;
+    color: var(--cor-primaria);
     text-align: center;
     margin: 25px 0 20px;
 }
 
 .register p a{
     text-decoration: none;
-    color: #fff;
+    color: var(--cor-primaria);
     font-weight: 600;
 }
 
