@@ -1,0 +1,10 @@
+
+@mixin displayFlex($content, $items){
+    justify-content: $content;
+    align-items: $items;
+}
+
+@mixin fs-color($f-size, $color){
+    font-size: $f-size;
+    color: $color;
+}

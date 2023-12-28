@@ -1,0 +1,121 @@
+@use '../abstract/root';
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+section{
+    display: flex;
+    @include mixins.displayFlex(center,center);
+    min-height: 100vh;
+    width: 100%;
+    background: url(/assets/wallpaperflare.com_wallpaper.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .form-box{
+        position: relative;
+        width: 400px;
+        height: 450px;
+        background: transparent;
+        border: 2px solid variaveis.$cor-secundaria;
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        display: flex;
+        @include mixins.displayFlex(center,center);
+
+        h2{
+            @include mixins.fs-color(2em,variaveis.$cor-primaria);
+            text-align: center;
+        }
+
+        .inputbox{
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid variaveis.$cor-primaria;
+
+             label{
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+                @include mixins.fs-color(1em,variaveis.$cor-primaria);
+                pointer-events: none;
+                transition: .5s;
+            }
+
+            input:focus ~ label,
+            input:valid ~ label{
+                top: -5px;
+            }
+
+            input{
+                width: 100%;
+                height: 50px;
+                background: transparent;
+                border: none;
+                outline: none;
+                padding: 0 35px 0 5px;
+                @include mixins.fs-color(1em,variaveis.$cor-primaria);
+            }
+            
+            ion-icon{
+                position: absolute;
+                right: 8px;
+                @include mixins.fs-color(1.2em,variaveis.$cor-primaria);
+                top: 20px;
+            }
+
+        }
+
+        .forget{
+            margin: -15px 0 15px;
+            @include mixins.fs-color(.9em,variaveis.$cor-primaria);
+            display: flex;
+            justify-content: center;
+
+            label input{
+                margin-right: 3px;
+            
+            }
+            
+            label a{
+                color: variaveis.$cor-primaria;
+                text-decoration: none;
+            }
+            
+            & label a:hover{
+                text-decoration: underline;
+            }
+        }
+        
+        button{
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: variaveis.$cor-primaria;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .register{
+            @include mixins.fs-color(.9em,variaveis.$cor-primaria);
+            text-align: center;
+            margin: 25px 0 20px;
+
+            p a{
+                text-decoration: none;
+                color: variaveis.$cor-primaria;
+                font-weight: 600;
+            }
+            
+            & p a:hover{
+                text-decoration: underline;
+            }
+        }
+        
+        
+    }
+}
